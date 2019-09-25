@@ -1,0 +1,41 @@
+JFDML JFormDesigner: "7.0.0.5.251" Java: "1.8.0_202-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp scrollPane1::l::308:x, seq l {space :::p, comp label1:::p:112:p, space ::190:x}, comp selectFileButton::l::308:x}"
+			"$verticalGroup": "par l {seq t {space :::p, comp selectFileButton:::p:41:p, space :::p, comp label1:::p::p, space :::x, comp scrollPane1:::p:317:p, space :::p}}"
+		} ) {
+			name: "this"
+			"resizable": false
+			"$locationPolicy": 1
+			"title": "WordCount"
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "selectFileButton"
+				"text": "选择文件夹"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "selectFileButtonActionPerformed", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "content"
+					"enabled": false
+					"foreground": new java.awt.Color( 0, 0, 0, 255 )
+					"font": new java.awt.Font( "Microsoft YaHei UI Light", 1, 19 )
+					"disabledTextColor": new java.awt.Color( 0, 0, 0, 255 )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "执行结果："
+				"font": new java.awt.Font( "Microsoft YaHei UI", 0, 18 )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 310, 425 )
+		} )
+	}
+}
